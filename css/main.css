@@ -1,0 +1,70 @@
+body,
+body * {
+box-sizing: border-box;  
+margin: 0;
+padding: 0;
+}
+
+
+.conteiner {
+    display: inline-block;
+    width: 100%;
+    padding: 3rem 0;
+    background-color: pink;
+}
+.conteiner > .row {
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+    background-color: aqua;
+}
+
+img {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 100px;
+    background-color: black;
+}
+p {
+    width: calc(100% - 200px);
+}
+
+@media (max-width: 1100px) {
+    /* break point ties kuriuo dydziu pritaikome naujas stiliaus taisykles */
+    .conteiner > .row {
+    width: 800px;
+    margin-left: calc(50% - 400px);
+    background-color: yellow;
+    }
+}
+@media (max-width: 900px) {
+    .conteiner > .row {
+    width: 600px;
+    margin-left: calc(50% - 300px);
+    background-color: green;
+    }
+}
+
+@media (max-width: 700px) {
+    .conteiner > .row {
+    width: 400px;
+    margin-left: calc(50% - 200px); 
+    /* puse ekrano - puse elemento */
+    background-color: violet;
+    }
+}
+
+@media (max-width: 460px) {
+    .conteiner > .row {
+    width: 100%;
+    margin-left: 0;
+    background-color: orange;
+    }
+}
+
+@media (max-width: 460px) {
+    .conteiner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
